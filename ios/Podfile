@@ -1,0 +1,18 @@
+# The target name is most likely the name of your project.
+platform :ios, '9.0'
+target 'KrogerProject' do
+
+  # Your 'node_modules' directory is probably in the root of your project,
+  # but if not, adjust the `:path` accordingly
+  pod 'Yoga', :path => '../node_modules/yoga', :inhibit_warnings => true
+  pod 'react-native-camera', path: '../node_modules/react-native-camera'
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'RCTText',
+    'RCTNetwork',
+    'RCTWebSocket',
+    'RCTCamera', # needed for debugging
+    # Add any other subspecs you want to use in your project
+  ]
+
+end
